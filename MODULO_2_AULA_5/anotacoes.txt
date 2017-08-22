@@ -1,0 +1,3 @@
+-- Comando Consultar os signals:
+	
+	$ Man 7 signal
