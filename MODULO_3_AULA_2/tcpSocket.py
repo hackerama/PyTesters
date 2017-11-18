@@ -15,7 +15,7 @@ class echoHandler(SocketServer.BaseRequestHandler):
 
         print "client left" 
 
-serverAddr = ("192.168.0.17", 9000)
+serverAddr = ("192.168.0.22", 8000)
 
 server = SocketServer.TCPServer(serverAddr, echoHandler)
 

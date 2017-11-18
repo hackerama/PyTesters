@@ -7,7 +7,7 @@ s = socket.socket(socket.AF_INET, socket. SOCK_STREAM)
 #Permite que eu reuse o endereco bindado apos o server crashar imediatamente
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 port = 8000
-bindip = '192.168.0.25'
+bindip = '192.168.0.17'
 # binda, abre uma porta em determinada interface para comecar a ouvir
 s.bind((bindip, port))
 
