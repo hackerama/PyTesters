@@ -14,6 +14,8 @@ ethernetHeader = pkt[0][0:14]
 #Os primeiros 6 bytes sao o destination mac address
 #Os proximos 6 sao o source mac address
 #Os ultimos 2 bytes sao o ether type (0800) IP ; ver /usr/include/linux/if_ether.h
+
+#separa o header do raw packet em tupla com a estrutura 6s6s2s)
 eth_hdr = struct.unpack("6s6s2s", ethernetHeader)
 print "eth_hdr = " , eth_hdr
 
@@ -35,4 +37,5 @@ tcp_hdr = struct.unpack("!HH16s", tcpHeader)
 
 print tcp_hdr
 
+#ifconfig eth0 promisc up
 
