@@ -1,17 +1,17 @@
+# PACKET SNIFFING SCAPY   
 <h4> Captura de pacotes com </h4>
-# SCAPY   
-  
+
     $ sudo scapy
 
 <h3>LISTAR PROTOCOLOS</h3>
 
     >>> ls()
 
-<h3>CHECAR CONFIGURACOES</h3>
+<h3>CHECAR CONFIGURAÇÕES</h3>
 
     >>> conf
 
-<h3> LISTAR AS OPCOES DE COMANDO </h3>
+<h3> LISTAR AS OPÇÕES DE COMANDO </h3>
 
     >> lsc()
 
