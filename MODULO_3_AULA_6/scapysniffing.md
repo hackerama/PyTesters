@@ -1,5 +1,5 @@
-<h2> Captura de pacotes com </h2>
-#    S       C       A       P       Y   #
+<h4> Captura de pacotes com </h4>
+#    S       C       A       P       Y   
 
     $ sudo scapy
 
@@ -11,18 +11,18 @@
 
     >>> conf
 
-*** LISTAR AS OPCOES DE COMANDO
+<h3> LISTAR AS OPCOES DE COMANDO </h3>
 
     >> lsc()
 
-*** SNIFFAR PACOTES DA REDE
+<h3> SNIFFAR PACOTES DA REDE </h3>
 
 >>> pkts = sniff(iface="eth0", count=3)
 >>> pkts #ve os pacotes capturados
 >>> pkts[0] #ve os pacotes um a um
 >>> pkts[0].show() #ve os pacotes de forma organizada.
 
-*** DUMP DE PACOTES EM HEX
+<h3> DUMP DE PACOTES EM HEX </h3>
 
 >>> hexdump(pkts[0])
 
@@ -49,13 +49,13 @@
 0140   55 50 6E 50 2D 44 65 76  69 63 65 2D 48 6F 73 74   UPnP-Device-Host
 0150   2F 31 2E 30 0D 0A 0D 0A                            /1.0....
 
-*** LER E ESCREVER ARQUIVOS PCAP
+<h3> LER E ESCREVER ARQUIVOS PCAP </h3>
 
 >>> wrpcap("demo.pcap", pkts) #write pcap file
 
 >>> read_pkts = rdpcap("demo.pcap") # le os arquivo
 
-*** APLICANDO FILTROS BPF (Berkeley Packet Filter)
+<h3> APLICANDO FILTROS BPF (Berkeley Packet Filter) </h3>
 
 #requests icmp
     >>> pkts = sniff(iface="eth0", filter ="icmp", count=3)
@@ -121,7 +121,7 @@
 ###[ Raw ]### 
            load= 'L\x8f$Z\x00\x00\x00\x00\x7f&\x08\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567'
 
-*** SNIFFAR EM TEMPO REAL UTILIZANDO A FUNCAO LAMBDA
+<h3> SNIFFAR EM TEMPO REAL UTILIZANDO A FUNCAO LAMBDA </h3>
 
 #novamente capturando requests ICMP em um ping
 
@@ -145,7 +145,7 @@ Ether / IP / ICMP 186.202.139.132 > 192.168.0.22 echo-reply 0 / Raw
 
 >>> pkts = sniff(iface="eth0", filter ="icmp", count=30, prn=lambda x: x.summary())
 
-***EXPORTAR PACOTES CAPTURADOS COMO STRINGS
+</h3> EXPORTAR PACOTES CAPTURADOS COMO STRINGS </h3>
 
 >>> icmp_str = str(pkts[0])
 
@@ -159,7 +159,7 @@ Ether / IP / ICMP 186.202.139.132 > 192.168.0.22 echo-reply 0 / Raw
 <Ether  dst=6c:b5:6b:0c:6c:dd src=08:00:27:49:f0:fa type=IPv4 |<IP  version=4L ihl=5L tos=0x0 len=84 id=31142 flags=DF frag=0L ttl=64 proto=icmp chksum=0xb9f5 src=192.168.0.22 dst=186.202.139.132 options=[] |<ICMP  type=echo-request code=0 chksum=0xc727 id=0x9d5 seq=0x1 |<Raw  load='\xd0\x92$Z\x00\x00\x00\x00qB\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567' |>>>>
 
 
-*** EXPORTAR PACOTES EM BASE 64
+<h3> EXPORTAR PACOTES EM BASE 64 </h3>
 
 >>> export_object(icmp_str)
 eNprYApNytmazZNzl4NB3fPDLw4GVwaGkMplDgwOjDu/HljBILbrVHcLB8Nxdc6rDIwXJqlEMQBB
