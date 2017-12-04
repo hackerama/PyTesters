@@ -1,6 +1,5 @@
 <h4> Captura de pacotes com </h4>
-***<h1>   S       C       A       P       Y   </h1>***
-
+**<h1>   S       C       A       P       Y   </h1>**
     $ sudo scapy
 
 <h3>LISTAR PROTOCOLOS</h3>
@@ -123,7 +122,7 @@
 
 <h3> SNIFFAR EM TEMPO REAL UTILIZANDO A FUNCAO LAMBDA </h3>
 
-    #novamente capturando requests ICMP em um ping
+#novamente capturando requests ICMP em um ping
 
     >>> pkts = sniff(iface="eth0", filter ="icmp", count=30, prn=lambda x: x.summary())
     Ether / IP / ICMP 192.168.0.22 > 186.202.139.132 echo-request 0 / Raw
@@ -141,18 +140,18 @@
     Ether / IP / ICMP 192.168.0.22 > 186.202.139.132 echo-request 0 / Raw
     Ether / IP / ICMP 186.202.139.132 > 192.168.0.22 echo-reply 0 / Raw
 
-    #para capturar todo o pacote
+#para capturar todo o pacote
 
     >>> pkts = sniff(iface="eth0", filter ="icmp", count=30, prn=lambda x: x.summary())
 
-</h3> EXPORTAR PACOTES CAPTURADOS COMO STRINGS </h3>
+<h3> EXPORTAR PACOTES CAPTURADOS COMO STRINGS </h3>
 
     >>> icmp_str = str(pkts[0])
 
     >>> icmp_str
     'l\xb5k\x0cl\xdd\x08\x00\'I\xf0\xfa\x08\x00E\x00\x00Ty\xa6@\x00@\x01\xb9\xf5\xc0\xa8\x00\x16\xba\xca\x8b\x84\x08\x00\xc7\'\t\xd5\x00\x01\xd0\x92$Z\x00\x00\x00\x00qB\x02\x00\x00\x00\x00\x00\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f !"#$%&\'()*+,-./01234567'
 
-    #para reconstruir
+#para reconstruir
 
     >>> recon = Ether(icmp_str)
     >>> recon
@@ -165,7 +164,7 @@
     eNprYApNytmazZNzl4NB3fPDLw4GVwaGkMplDgwOjDu/HljBILbrVHcLB8Nxdc6rDIwXJqlEMQBB
     oRMTiGIQEBQSFhEVE5eQlJKWkZWTV1BUUlZRVVPX0NTS1tHV0zcwNDI2MTUzL2TUAwBEKBkT
 
-    #para reconstruir
+#para reconstruir
 
     >>> newPkt = import_object() #[ENTER]
     eNprYApNytmazZNzl4NB3fPDLw4GVwaGkMplDgwOjDu/HljBILbrVHcLB8Nxdc6rDIwXJqlEMQBB
