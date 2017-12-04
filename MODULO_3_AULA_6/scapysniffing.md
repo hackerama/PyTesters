@@ -1,22 +1,19 @@
-##########################################
-#                                        #
+<h2> Captura de pacotes com </h2>
 #    S       C       A       P       Y   #
-#                                        #
-##########################################
 
-#$ sudo scapy
+    $ sudo scapy
 
-**LISTAR PROTOCOLOS
+<h3>LISTAR PROTOCOLOS</h3>
 
->>> ls()
+    >>> ls()
 
-**CHECAR CONFIGURACOES
+<h3>CHECAR CONFIGURACOES</h3>
 
->>> conf
+    >>> conf
 
 *** LISTAR AS OPCOES DE COMANDO
 
->> lsc()
+    >> lsc()
 
 *** SNIFFAR PACOTES DA REDE
 
