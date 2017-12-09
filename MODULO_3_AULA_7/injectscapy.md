@@ -40,10 +40,10 @@ Gravando as respostas em uma variavel:
 
     response, no_response = _ #underline significa o ultimo resultado
     
-    $ response
+    response
     <Results: TCP:0 UDP:0 ICMP:1 Other:0>
     
-    $ no_response
+    no_response
     <Unanswered: TCP:0 UDP:0 ICMP:0 Other:0>
    
     $ response[0]
@@ -52,16 +52,14 @@ Gravando as respostas em uma variavel:
 - Enviando um pacote IP simples:
 Ele vai enviar, e ficar aguardando eternamente por uma resposta, pois eh um pacote simples sem nenhuma requisicao especifica. 
 
-    $ sr(IP(dst="google.com"), timeout = 3)
-    Begin emission:
-    .Finished to send 1 packets.
+        sr(IP(dst="google.com"), timeout = 3)
+        Begin emission:
+        .Finished to send 1 packets.
 
-    Received 1 packets, got 0 answers, remaining 1 packets
-    (<Results: TCP:0 UDP:0 ICMP:0 Other:0>, <Unanswered: TCP:0 UDP:0 ICMP:0 Other:1>)
+        Received 1 packets, got 0 answers, remaining 1 packets
+        (<Results: TCP:0 UDP:0 ICMP:0 Other:0>, <Unanswered: TCP:0 UDP:0 ICMP:0 Other:1>)
 
-    Observe que agora o pacote foi listado como nao respondido.  
-
-
+Observe que agora o pacote foi listado como nao respondido.  
 
 - sr1() 
 Retorna apenas os pacotes respondidos ou enviados. Espera por uma unica resposta.
