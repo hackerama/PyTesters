@@ -32,27 +32,27 @@ Para setar um intervalo entre os envios:
 <h4> Camada 3 </h4>
 
 - sr()
-    * retorna os pcaotes respondidos e nao respondidos
+Retornar os pacotes respondidos e nao respondidos:
      
-        sr(IP(dst="google.com")/ICMP()/"WakaWaka")
+    sr(IP(dst="google.com")/ICMP()/"WakaWaka")
 
-    * gravando as respostas em uma variavel
+Gravando as respostas em uma variavel:
 
-        response, no_response = _ #underline significa o ultimo resultado
+    response, no_response = _ #underline significa o ultimo resultado
     
-    >>> response
+    $ response
     <Results: TCP:0 UDP:0 ICMP:1 Other:0>
     
-    >>> no_response
+    $ no_response
     <Unanswered: TCP:0 UDP:0 ICMP:0 Other:0>
    
-    >>> response[0]
+    $ response[0]
     (<IP  frag=0 proto=icmp dst=172.217.19.206 |<ICMP  |<Raw  load='WakaWaka' |>>>, <IP  version=4L ihl=5L tos=0x0 len=36 id=0 flags= frag=0L ttl=47 proto=icmp chksum=0xa6f src=172.217.19.206 dst=192.168.0.27 options=[] |<ICMP  type=echo-reply code=0 chksum=0x7a7a id=0x0 seq=0x0 |<Raw  load='WakaWaka' |<Padding  load='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' |>>>>)
 
     * Enviando um pacote IP simples:
 Ele vai enviar, e ficar aguardando eternamente por uma resposta, pois eh um pacote simples sem nenhuma requisicao especifica. 
 
-    >>> sr(IP(dst="google.com"), timeout = 3)
+    $ sr(IP(dst="google.com"), timeout = 3)
     Begin emission:
     .Finished to send 1 packets.
 
