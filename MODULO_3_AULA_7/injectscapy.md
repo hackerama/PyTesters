@@ -59,14 +59,14 @@ Ele vai enviar, e ficar aguardando eternamente por uma resposta, pois eh um paco
     Received 1 packets, got 0 answers, remaining 1 packets
     (<Results: TCP:0 UDP:0 ICMP:0 Other:0>, <Unanswered: TCP:0 UDP:0 ICMP:0 Other:1>)
 
-Observe que agora o pacote eh listado como nao respondido.  
+    Observe que agora o pacote foi listado como nao respondido.  
 
 
 
 - sr1() 
-    * retorna apenas os pacotes respondidos ou enviados. Espera por uma unica resposta.
+Retorna apenas os pacotes respondidos ou enviados. Espera por uma unica resposta.
     
-        sr1(IP(dst="google.com")/ICMP()/"WakaWaka")
+   sr1(IP(dst="google.com")/ICMP()/"WakaWaka")
 
 <h4> Camada 2 </h4>
 
