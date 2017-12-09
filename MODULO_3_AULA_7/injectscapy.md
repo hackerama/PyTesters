@@ -34,11 +34,11 @@ Para setar um intervalo entre os envios:
 - sr()
     * retorna os pcaotes respondidos e nao respondidos
      
-    sr(IP(dst="google.com")/ICMP()/"WakaWaka")
+        sr(IP(dst="google.com")/ICMP()/"WakaWaka")
 
     * gravando as respostas em uma variavel
 
-    response, no_response = _ #underline significa o ultimo resultado
+        response, no_response = _ #underline significa o ultimo resultado
     
     >>> response
     <Results: TCP:0 UDP:0 ICMP:1 Other:0>
@@ -63,12 +63,10 @@ Observe que agora o pacote eh listado como nao respondido.
 
 
 
-
-
 - sr1() 
     * retorna apenas os pacotes respondidos ou enviados. Espera por uma unica resposta.
     
-    sr1(IP(dst="google.com")/ICMP()/"WakaWaka")
+        sr1(IP(dst="google.com")/ICMP()/"WakaWaka")
 
 <h4> Camada 2 </h4>
 
@@ -76,7 +74,7 @@ Observe que agora o pacote eh listado como nao respondido.
 
 - srp1()
 
-    pkt = srp1(Ether()/IP(dst="google.com",ttl=22)/ICMP()/"WakaWaka")i
+        pkt = srp1(Ether()/IP(dst="google.com",ttl=22)/ICMP()/"WakaWaka")i
 
 
 
