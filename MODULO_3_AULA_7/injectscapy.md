@@ -49,7 +49,7 @@ Gravando as respostas em uma variavel:
     $ response[0]
     (<IP  frag=0 proto=icmp dst=172.217.19.206 |<ICMP  |<Raw  load='WakaWaka' |>>>, <IP  version=4L ihl=5L tos=0x0 len=36 id=0 flags= frag=0L ttl=47 proto=icmp chksum=0xa6f src=172.217.19.206 dst=192.168.0.27 options=[] |<ICMP  type=echo-reply code=0 chksum=0x7a7a id=0x0 seq=0x0 |<Raw  load='WakaWaka' |<Padding  load='\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00' |>>>>)
 
-    * Enviando um pacote IP simples:
+- Enviando um pacote IP simples:
 Ele vai enviar, e ficar aguardando eternamente por uma resposta, pois eh um pacote simples sem nenhuma requisicao especifica. 
 
     $ sr(IP(dst="google.com"), timeout = 3)
@@ -66,7 +66,7 @@ Ele vai enviar, e ficar aguardando eternamente por uma resposta, pois eh um paco
 - sr1() 
 Retorna apenas os pacotes respondidos ou enviados. Espera por uma unica resposta.
     
-   sr1(IP(dst="google.com")/ICMP()/"WakaWaka")
+       sr1(IP(dst="google.com")/ICMP()/"WakaWaka")
 
 <h4> Camada 2 </h4>
 
