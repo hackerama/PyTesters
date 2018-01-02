@@ -4,7 +4,7 @@
 
         >>> import urllib
         >>> httpResponse = urllib.urlopen("http://localhost")
-
+  
 <h3> CONSULTAR O RESPONSE CODE </h3>
 
         >>> httpResponse.code
