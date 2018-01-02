@@ -15,7 +15,7 @@ def clientHandler(clientSock):
        # return 
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(('192.168.0.32', int(sys.argv[1])))
+s.bind(('192.168.0.27', int(sys.argv[1])))
 s.listen(10)
 
 

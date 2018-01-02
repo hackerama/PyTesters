@@ -1,5 +1,3 @@
-#/usr/bin/python
-
 import socket
 import struct
 
@@ -22,4 +20,3 @@ print "TAMANHO DO PACOTE: " , len(packet) , "\n"
 # envia o pacote para a rede
 # tcpdump -i eth0 -vv -XX "not port 22"
 rawSocket.send(packet + "Ate mais e obrigado pelos peixes")
-
