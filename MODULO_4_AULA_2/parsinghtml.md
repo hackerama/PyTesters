@@ -152,43 +152,43 @@
 <h5> Imprimindo todos os links: </h5>
 
         >>> for i in range(len(allLinks)):
-...     print allLinks[i]['href']
-... 
-    http://www.sbt.com.br/home/
-    javascript:void(0);
-    /programacao/
-    /sbtvideos/
-    /inscricoes/
-    /jornalismo/
-    javascript:void(0);
-    http://www.sbt.com.br/aovivo/
-    javascript:void(0);
-    javascript:void(0);
-    javascript:void(0);
-    javascript:void(0);
-    javascript:void(0);
-    javascript:void(0);
-    /silviosantos/trajetoria
-    /silviosantos/oanimador
-    /silviosantos/curiosidades
-    /silviosantos/depoimentos
-    /silviosantos/fotos
-    /silviosantos/
-    /silviosantos/trajetoria
-    /silviosantos/oanimador
-    /silviosantos/curiosidades
-    /silviosantos/depoimentos
-    /silviosantos/fotos
-    /silviosantos/trajetoria/
-    /silviosantos/oanimador/
-    /silviosantos/curiosidades/
-    /silviosantos/fotos/
-    http://www.sbt.com.br/institucional/
-    http://www.sbt.com.br/app/
-    http://www.sbt.com.br/tvdigital/sinal/
-    /institucional/
-    http://www.sbt.com.br/sbtdobem/
-    http://www.sbt.com.br/internationalsales/
+        ...     print allLinks[i]['href']
+        ... 
+        http://www.sbt.com.br/home/
+        javascript:void(0);
+        /programacao/
+        /sbtvideos/
+        /inscricoes/
+        /jornalismo/
+        javascript:void(0);
+        http://www.sbt.com.br/aovivo/
+        javascript:void(0);
+        javascript:void(0);
+        javascript:void(0);
+        javascript:void(0);
+        javascript:void(0);
+        javascript:void(0);
+        /silviosantos/trajetoria
+        /silviosantos/oanimador
+        /silviosantos/curiosidades
+        /silviosantos/depoimentos
+        /silviosantos/fotos
+        /silviosantos/
+        /silviosantos/trajetoria
+        /silviosantos/oanimador
+        /silviosantos/curiosidades
+        /silviosantos/depoimentos
+        /silviosantos/fotos
+        /silviosantos/trajetoria/
+        /silviosantos/oanimador/
+        /silviosantos/curiosidades/
+        /silviosantos/fotos/
+        http://www.sbt.com.br/institucional/
+        http://www.sbt.com.br/app/
+        http://www.sbt.com.br/tvdigital/sinal/
+        /institucional/
+        http://www.sbt.com.br/sbtdobem/
+        http://www.sbt.com.br/internationalsales/
    
 <h3> OBTENDO TODO O TEXTO CRU DO DOCUMENTO </h3> 
 
